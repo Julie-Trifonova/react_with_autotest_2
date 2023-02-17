@@ -1,12 +1,5 @@
 * {
     box-sizing: border-box;
-    /*outline: none;*/
-    /*-webkit-appearance: none;*/
-    /*-moz-appearance: none;*/
-    /*appearance: none;*/
-    /*-moz-user-select: none;*/
-    /*-ms-user-select: none;*/
-    /*user-select: none;*/
 }
 /** {*/
 /*    margin: 0;*/
@@ -31,6 +24,11 @@
     cursor: pointer;
     box-shadow: none;
     /*text-align: center;*/
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
 }
 
 .button_disabled:disabled {
@@ -52,7 +50,6 @@
 }
 
 .loader-button {
-    /*position: absolute;*/
     z-index: 3;
     margin: auto;
     color: white;
