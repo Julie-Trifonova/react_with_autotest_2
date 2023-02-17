@@ -3,33 +3,35 @@
     /*position: absolute;*/
     -webkit-appearance: none;
     -moz-appearance: none;
-
+    box-shadow: none;
 }
 
 .checkbox {
     background-color: #FFFFFF;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
-    width: 30px;
-    height: 30px;
-
-
+    width: 32px;
+    height: 32px;
 }
 
 .checkbox:focus {
     border: 1px solid #FF5555;
 }
+
 .checkbox:hover {
-    /*cursor: pointer;*/
+    cursor: pointer;
     border: 1px solid #ff5555;
 
 }
+
 .checkbox:checked {
-    background-image: url("./CheckBox.svg");
-    background-size: cover;
-    /*border: none;*/
+    background-image: url("./check_test.svg");
+    background-repeat: no-repeat;
+    background-position: 6px 2px;
     border: 1px solid #ff5555;
+
 }
+
 .checkbox:disabled {
     opacity: 0.5;
     border: 1px solid #D9D9D9;
