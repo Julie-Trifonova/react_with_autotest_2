@@ -1,0 +1,16 @@
+.multi-dropdown {
+    width: 295px;
+    height: 50px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+}
+
+.drop-element {
+    width: 295px;
+    height: 50px;
+    border: 1px solid #D9D9D9;
+}
+
+.list:nth-last-child {
+    border-radius: 6px 0;
+}

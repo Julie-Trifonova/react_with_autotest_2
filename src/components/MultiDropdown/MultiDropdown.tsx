@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './multiDropDown.css'
 
 export type Option = {
   /** Ключ варианта, используется для отправки на бек/использования в коде */
@@ -21,4 +22,40 @@ export type MultiDropdownProps = {
   pluralizeOptions: (value: Option[]) => string;
 };
 
-export const MultiDropdown: React.FC<MultiDropdownProps> = () => null;
+export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
+  const [visible, setVisible] = useState(false);
+
+  const handleOnInputChange = (object: Option, e: any) => {
+    props.value.includes(object)
+        ? props.onChange(props.value.filter((value) => value.key !== object.key))
+        : props.onChange([...props.value, object]);
+  }
+
+  const handleChangeVisibility = () => {
+    setVisible(!visible);
+  }
+  return (
+      <div className='multi-dropdown'>
+        <div onClick={handleChangeVisibility}>
+          {props.pluralizeOptions(props.value)}
+        </div>
+        {!props.disabled && visible ? (
+            <div className='list'>
+              {props.options.map((option) => (
+                  <div key={option.key} className='drop-element'>
+                    <label>
+                      <input
+                          className='input'
+                          name={option.value}
+                          type='checkbox'
+                          onChange={(e) => handleOnInputChange(option, e)}
+                      />
+                      {option.value}
+                    </label>
+                  </div>
+              ))}
+            </div>
+        ) : <></>}
+      </div>
+  )
+};

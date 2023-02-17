@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.inputElement {
+    width: 400px;
+    height: 50px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.inputElement:focus {
+    border-color: #FF5555;
+    border: 3px solid #FF5555;
+
+}
+
+.inputElement:disabled {
+    background: #F9F9F9;
+    width: 400px;
+}
+
+.inputElement:hover {
+    cursor: pointer;
+}

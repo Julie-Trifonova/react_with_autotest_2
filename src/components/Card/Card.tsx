@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './Card.module.css'
 
 export type CardProps = {
   /** URL изображения */
@@ -13,4 +14,18 @@ export type CardProps = {
   onClick?: React.MouseEventHandler;
 };
 
-export const Card: React.FC<CardProps> = () => null;
+export const Card: React.FC<CardProps> = (props) => {
+  return (
+      <div className={s.container} onClick={props.onClick}>
+        <img
+            className={s.image}
+            src={props.image}/>
+        <div className={s.content}>
+          <h3>{props.title}</h3>
+          <div className={s.text}>{props.subtitle}</div>
+          <div className={s.text}>{props.content}</div>
+        </div>
+
+      </div>
+  )
+};
