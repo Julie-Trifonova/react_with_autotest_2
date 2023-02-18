@@ -36,7 +36,7 @@ export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
   }
   return (
       <div className='multi-dropdown'>
-        <div onClick={handleChangeVisibility}>
+        <div className='chosen-element' onClick={handleChangeVisibility}>
           {props.pluralizeOptions(props.value)}
         </div>
         {!props.disabled && visible ? (
@@ -45,7 +45,7 @@ export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
                   <div key={option.key} className='drop-element'>
                     <label>
                       <input
-                          className='input'
+                          className='input drop-input'
                           name={option.value}
                           type='checkbox'
                           onChange={(e) => handleOnInputChange(option, e)}

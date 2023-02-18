@@ -1,16 +1,35 @@
-.multi-dropdown {
-    width: 295px;
+.drop-input {
+    /*-webkit-appearance: none;*/
+}
+
+.drop-input:checked {
+    background-color: #F1F1F1;
+}
+
+.drop-element {
+    width: 370px;
+    height: 50px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
+}
+.chosen-element {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    width: 370px;
     height: 50px;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
 }
 
-.drop-element {
-    width: 295px;
-    height: 50px;
-    border: 1px solid #D9D9D9;
+.drop-element:nth-child(1) {
+    margin-top: 8px;
+    border-radius: 6px 6px 0 0;
 }
 
-.list:nth-last-child {
-    border-radius: 6px 0;
+.drop-element:nth-child(3) {
+    border-radius: 0 0 6px 6px;
 }

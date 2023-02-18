@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
 }
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*    box-shadow: none;*/
-/*}*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../styles/Roboto/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 .button {
     border: none;
@@ -23,12 +24,9 @@
     align-items: center;
     cursor: pointer;
     box-shadow: none;
-    /*text-align: center;*/
-    font-family: 'Roboto-Bold';
-    font-style: normal;
-    font-weight: 700;
+    font-family: 'Roboto';
     font-size: 20px;
-    line-height: 23px;
+    /*line-height: 23px;*/
 }
 
 .button_disabled:disabled {
@@ -55,10 +53,3 @@
     color: white;
     border-color: white;
 }
-
-/*.children:hover {*/
-/*    background: #FF5555;*/
-/*    font-size: 20px;*/
-/*    color: white;*/
-
-/*}*/
