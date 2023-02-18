@@ -37,9 +37,9 @@
 
 .button:hover {
     pointer: cursor;
-    background-color: #ff0000;
+    background-color: #ff8888;
     color: white;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
 }
 .button_disabled:hover {
     background-color: #D9D9D9;

@@ -8,6 +8,11 @@ import {MultiDropdown, MultiDropdownProps, Option} from "./components/MultiDropd
 import {CheckBox} from "./components/CheckBox/CheckBox";
 import {Button} from "./components/Button/Button";
 
+const myValues =[
+        { key: 'msk', value: 'Москва' },
+{ key: 'spb', value: 'Санкт-Петербург' }
+]
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
@@ -38,52 +43,51 @@ root.render(
                 ]}
                 value={[{ key: 'msk', value: 'Москва' }]}
                 onChange={()=> console.log('fvdv')}
-                pluralizeOptions={(values: Option[]) => values.length === 0 ? 'Выберите город' : `Выбрано: ${values.length}`}
+                pluralizeOptions={myValues}
             />
+            {/*<CheckBox*/}
+            {/*    checked={true}*/}
+            {/*    onChange={()=> console.log('fvdv')}*/}
+            {/*/>*/}
 
-            <CheckBox
-                checked={true}
-                onChange={()=> console.log('fvdv')}
-            />
+            {/*<CheckBox*/}
+            {/*    // checked={true}*/}
+            {/*    onChange={()=> console.log('fvdv')}*/}
+            {/*/>*/}
 
-            <CheckBox
-                // checked={true}
-                onChange={()=> console.log('fvdv')}
-            />
+            {/*// Заблокированный чекбокс*/}
+            {/*<CheckBox*/}
+            {/*    disabled*/}
+            {/*    checked={false}*/}
+            {/*    onChange={()=> console.log('fvdv')}*/}
+            {/*/>*/}
 
-            // Заблокированный чекбокс
-            <CheckBox
-                disabled
-                checked={false}
-                onChange={()=> console.log('fvdv')}
-            />
+            {/*// Кнопка с текстом "Отправить", логирующая в консоль "Письмо отправлено" при клике*/}
+            {/*<Button onClick={() => console.log('Письмо отправлено')}>*/}
+            {/*    Отправить*/}
+            {/*</Button>*/}
 
-            // Кнопка с текстом "Отправить", логирующая в консоль "Письмо отправлено" при клике
-            <Button onClick={() => console.log('Письмо отправлено')}>
-                Отправить
-            </Button>
+            {/*// Кнопка, отображающая компонент Loader при загрузке каких-то данных*/}
+            {/*<Button*/}
+            {/*    loading={true}*/}
+            {/*>*/}
+            {/*    Отправить*/}
+            {/*</Button>*/}
 
-            // Кнопка, отображающая компонент Loader при загрузке каких-то данных
-            <Button
-                loading={true}
-            >
-                Отправить
-            </Button>
+            {/*// Кнопка с элементом в качестве содержимого*/}
+            {/*<Button>*/}
+            {/*    <span>Модная кнопка</span>*/}
+            {/*</Button>*/}
 
-            // Кнопка с элементом в качестве содержимого
-            <Button>
-                <span>Модная кнопка</span>
-            </Button>
+            {/*// Заблокированная кнопка с дополнительным классом*/}
+            {/*<Button className="some-outer-class" disabled>*/}
+            {/*    Отправить*/}
+            {/*</Button>*/}
 
-            // Заблокированная кнопка с дополнительным классом
-            <Button className="some-outer-class" disabled>
-                Отправить
-            </Button>
-
-            // Кнопка с пропсом нативной кнопки
-            <Button onMouseOver={() => console.log('Убери от меня курсор!')}>
-                Отправить
-            </Button>
+            {/*// Кнопка с пропсом нативной кнопки*/}
+            {/*<Button onMouseOver={() => console.log('Убери от меня курсор!')}>*/}
+            {/*    Отправить*/}
+            {/*</Button>*/}
         </div>
     </React.StrictMode>
 );
