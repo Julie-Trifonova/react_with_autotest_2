@@ -24,6 +24,7 @@ export type MultiDropdownProps = {
 
 export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
   const [visible, setVisible] = useState(false);
+  const [choose, setChoose] = useState(false);
 
   const handleOnInputChange = (object: Option, e: any) => {
     props.value.includes(object)
@@ -33,6 +34,10 @@ export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
 
   const handleChangeVisibility = () => {
     setVisible(!visible);
+  }
+
+  const handleChangeOnClick = () => {
+    setChoose(!choose);
   }
   return (
       <div className='multi-dropdown'>
@@ -46,8 +51,10 @@ export const MultiDropdown: React.FC<MultiDropdownProps> = (props) => {
                     <label>
                       <input
                           className='input drop-input'
+                          // checked={true}
                           name={option.value}
                           type='checkbox'
+                          // onClick={handleChangeOnClick}
                           onChange={(e) => handleOnInputChange(option, e)}
                       />
                       {option.value}

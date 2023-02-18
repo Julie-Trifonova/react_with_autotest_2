@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Card.module.css'
+import './Card.css'
 
 export type CardProps = {
   /** URL изображения */
@@ -16,14 +16,14 @@ export type CardProps = {
 
 export const Card: React.FC<CardProps> = (props) => {
   return (
-      <div className={s.container} onClick={props.onClick}>
+      <div className={'card'} onClick={props.onClick}>
         <img
-            className={s.image}
+            className={'image'}
             src={props.image}/>
-        <div className={s.content}>
+        <div className={'content'}>
           <h3>{props.title}</h3>
-          <div className={s.text}>{props.subtitle}</div>
-          <div className={s.text}>{props.content}</div>
+          <div className={'text'}>{props.subtitle}</div>
+          <div className={'text'}>{props.content}</div>
         </div>
 
       </div>

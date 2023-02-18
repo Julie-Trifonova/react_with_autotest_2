@@ -38,7 +38,7 @@ root.render(
                 ]}
                 value={[{ key: 'msk', value: 'Москва' }]}
                 onChange={()=> console.log('fvdv')}
-                pluralizeOptions={(values: Option[]) => values.length === 0 ? 'Выберите город' : `Выбрано: ${values.length}`}
+                pluralizeOptions={(values: Option[]) => 'Москва, Санкт-Петербург'}
             />
 
             <CheckBox
