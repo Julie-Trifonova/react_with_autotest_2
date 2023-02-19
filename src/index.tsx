@@ -8,6 +8,17 @@ import {MultiDropdown, MultiDropdownProps, Option} from "./components/MultiDropd
 import {CheckBox} from "./components/CheckBox/CheckBox";
 import {Button} from "./components/Button/Button";
 
+
+const currentValues = [
+    { key: 'msk', value: 'Москва' },
+    { key: 'spb', value: 'Санкт-Петербург' },
+    { key: 'kms', value: 'Комсомольск на амуре' },
+    // { key: 'kms', value: 'Комсомольск на амуре' },
+    // { key: 'ekb', value: 'Екатеринбург' }]
+]
+
+const inputValue = '';
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
@@ -23,7 +34,7 @@ root.render(
                 onClick={() => console.log('Мандарин куплен!')}
             />
             <Input
-                value=""
+                value={inputValue}
                 onChange={(value: string) => console.log(value)}
                 placeholder="Начните набирать свой вопрос"
                 // disabled
@@ -34,11 +45,12 @@ root.render(
                 options={[
                     { key: 'msk', value: 'Москва' },
                     { key: 'spb', value: 'Санкт-Петербург' },
+                    { key: 'kms', value: 'Комсомольск на амуре' },
                     { key: 'ekb', value: 'Екатеринбург' }
                 ]}
                 value={[{ key: 'msk', value: 'Москва' }]}
                 onChange={()=> console.log('fvdv')}
-                pluralizeOptions={(values: Option[]) => 'Москва, Санкт-Петербург'}
+                pluralizeOptions={(values: Option[]) => currentValues.map((el: Option) => el.value).join(", ")}
             />
 
             <CheckBox
